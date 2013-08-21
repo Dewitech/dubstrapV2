@@ -40,6 +40,9 @@
   		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 		<!-- Main CSS -->
 			<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+			<link rel="stylesheet/less" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/less/bootstrap.less" />
+			<link rel="stylesheet/less" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/docs.less" />
+
 
 			<!-- wordpress head functions -->
 		<?php wp_head(); ?>

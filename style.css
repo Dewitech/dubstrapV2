@@ -1,0 +1,60 @@
+/*
+Theme Name: Dubstrap Framework
+Theme URI: http://dewitech.com
+Author: Dewitech
+Author URI: http://dewitech.com
+Description: Wordpress bootstrap framework by Dewitech Team.
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: dubstrap
+Version: 1.0
+Text Domain: dubstrap
+
+*/
+article {margin-top:60px}
+.portfolio-img {margin-bottom:20px}
+.footer-bottom {margin-top:20px;}
+
+/* Archive Style */
+.item-cat {margin-bottom:20px; height:300px; overflow:hidden;}
+.item-cat2 {margin-bottom:20px; height:300px; overflow:hidden;}
+
+/* Social Icons */
+ul.social-icons  {list-style-type:none; font-size:20px}
+.social-icons li {display:inline; padding:0 5px;}
+.social-icons a {color:#333;}
+/* Archive Style */
+ul.meta {list-style-type:none; margin:-10px 0 10px 0; padding:0;}
+.meta li {display:inline;}
+
+/* Contact Widget
+----------------------------------------------------- */
+ul.contact-widget {list-style-type:none; margin:0;}
+.contact-widget  i{font-size:20px;}
+.contact-widget li {padding: 2px 0;}
+/* Flikcr
+----------------------------------------------------- */
+#flickr_badge_wrapper img {
+    border-color: #2B2F33;
+    border-style: solid;
+    border-width: 2px;
+    float: left;
+    height: 54px;
+    margin: 0 0 7px 7px;
+    transition: all 0.3s ease-out 0s;
+    width: 54px;
+}
+
+.not-found  {
+    padding-top: 50px;
+}
+.not-found h1 {
+    font-size: 120px;
+    padding-bottom: 20px;
+}
+.not-found-icon {
+    display: block;
+    font-size: 220px;
+    line-height: 1em;
+    text-align: center;
+}

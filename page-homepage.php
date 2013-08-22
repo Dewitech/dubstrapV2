@@ -1,6 +1,6 @@
 <?php
 /**
- * Index
+ * Template Name: Homepage
  */
 get_header(); 
 
@@ -53,7 +53,7 @@ get_header();
 			?>
 				<div class="col-md-4 portfolio-img">
 					<a href="<?php echo $full_url;?>" data-rel="prettyPhoto" rel="prettyPhoto">
-						<img src="<?php echo $full_url; ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" />
+						<img src="<?php echo $full_url; ?>" title="<?php the_title(); ?>" class="img-responsive" alt="<?php the_title(); ?>" />
 					</a>
 				</div>
 			<?php } ?>

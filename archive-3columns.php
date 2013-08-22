@@ -27,7 +27,7 @@
 				</footer> <!-- end article footer -->
 		</div>
 	<?php endwhile; ?>
-	<div class="col-md-12">
+	<div class="col-md-6">
 		<?php page_navi(); ?>
 	</div>
 

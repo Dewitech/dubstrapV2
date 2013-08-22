@@ -9,7 +9,7 @@
  * @since Twenty Thirteen 1.0
  */
 ?>
-	<div id="secondary" class="col-md-4" role="complementary">
+	<div id="secondary" role="complementary">
 		<div class="widget-area">
 			<?php dynamic_sidebar('sidebar-page'); ?>
 		</div><!-- .widget-area -->

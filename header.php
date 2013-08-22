@@ -64,15 +64,11 @@
 				  </button>
 				  <a class="navbar-brand" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
 				</div>
-					<div class="navbar-collapse collapse">
-					  <ul class="nav navbar-nav">
-						<?php dubstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>
-					  </ul>
-					</li>
-				  </ul>
-					<form class="navbar-search pull-right" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
+				<div class="navbar-collapse collapse">
+					<?php dubstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>
+					<form class="navbar-form navbar-right" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
 						<div class="form-group">
-							<input name="s" id="s" type="text" class="search-query" autocomplete="off" placeholder="<?php _e('Search','dubstrap'); ?>" data-provide="typeahead" data-items="4" data-source='<?php echo $typeahead_data; ?>'>
+							<input name="s" id="s" type="text" class="form-control" autocomplete="off" placeholder="<?php _e('Search','dubstrap'); ?>" data-provide="typeahead" data-items="4" data-source='<?php echo $typeahead_data; ?>'>
 						</div>
 					</form>
 				</div><!--/.navbar-collapse -->

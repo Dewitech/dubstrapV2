@@ -58,3 +58,8 @@ ul.contact-widget {list-style-type:none; margin:0;}
     line-height: 1em;
     text-align: center;
 }
+/* Map */
+#map {
+width: 100%;
+height: 400px;
+}

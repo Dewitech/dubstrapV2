@@ -85,7 +85,7 @@
 		<?php } ?>
 
 			
-		/*	jQuery(document).ready(new function() {
+			jQuery(document).ready(new function() {
 
 				jQuery("#map").gMap({
 					controls: false,
@@ -104,7 +104,7 @@
 				});
 				
 			});
-		*/
+		
 		// Twitter Setting
 			  jQuery(function($){
 				$(".timeline").tweet({

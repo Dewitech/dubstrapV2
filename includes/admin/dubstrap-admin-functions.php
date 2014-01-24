@@ -163,10 +163,10 @@ function siteoptions_options_page(){
     <input type="submit" value="Save All Changes" class="button-primary" />
   </form>
   <form action="<?php echo esc_attr( $_SERVER['REQUEST_URI'] ) ?>" method="post" style="display:inline" id="ofform-reset">
-    <col-md- class="submit-footer-reset">
+    <span class="submit-footer-reset">
     <input name="reset" type="submit" value="Reset Options" class="button submit-button reset-button" onclick="return confirm('CAUTION: Any and all settings will be lost! Click OK to reset.');" />
     <input type="hidden" name="of_save" value="reset" />
-    </col-md->
+    </span>
   </form>
 </div>
 <?php  if (!empty($update_message)) echo $update_message; ?>
@@ -399,7 +399,7 @@ function of_load_only() {
 					this.enable(); 
 					
 					if(response.search('Upload Error') > -1){
-						var buildReturn = '<col-md- class="upload-error">' + response + '</col-md->';
+						var buildReturn = '<span class="upload-error">' + response + '</span>';
 						jQuery(".upload-error").remove();
 						clickedObject.parent().after(buildReturn);
 					
@@ -411,7 +411,7 @@ function of_load_only() {
 						jQuery("#image_" + clickedID).remove();	
 						clickedObject.parent().after(buildReturn);
 						jQuery('img#image_'+clickedID).fadeIn();
-						clickedObject.next('col-md-').fadeIn();
+						clickedObject.next('span').fadeIn();
 						clickedObject.parent().prev('input').val(response);
 					}
 				  }
@@ -801,11 +801,11 @@ function siteoptions_machine($options) {
 						else { $checked = ''; }
 					}	
 				
-				$output .= '<col-md->';
+				$output .= '<span>';
 				$output .= '<input type="radio" id="of-radio-img-' . $value['id'] . $i . '" class="checkbox of-radio-img-radio" value="'.$key.'" name="'. $value['id'].'" '.$checked.' />';
 				$output .= '<div class="of-radio-img-label">'. $key .'</div>';
-				$output .= '<img src="'. get_template_directory_uri() .'/includes/admin/images/'.$option.'" alt="" class="of-radio-img-img '. $selected .'" onClick="document.getElementById(\'of-radio-img-'. $value['id'] . $i.'\').checked = true;" />';
-				$output .= '</col-md->';
+				$output .= '<img src="'. get_template_directory_uri() .'/includes/admin/images/'.$option.'" alt="'. $key .'" title="'. $key .'" class="of-radio-img-img '. $selected .'" onClick="document.getElementById(\'of-radio-img-'. $value['id'] . $i.'\').checked = true;" />';
+				$output .= '</span>';
 				
 			}
 		
@@ -840,7 +840,7 @@ function siteoptions_machine($options) {
 					if($array['type'] == 'text') { 
 						 
 						 $output .= '<input class="input-text-small of-input" name="'. $id .'" id="'. $id .'" type="text" value="'. $std .'" />';  
-						 $output .= '<col-md- class="meta-two">'.$meta.'</col-md->';
+						 $output .= '<span class="meta-two">'.$meta.'</span>';
 					}
 				}
 		}
@@ -871,11 +871,11 @@ function siteoptions_uploader_function($id,$std,$mod){
             $uploader .= '<input class="of-input" name="'. $id .'" id="'. $id .'_upload" type="text" value="'. $val .'" />';
 	}
 	
-	$uploader .= '<div class="upload_button_div"><col-md- class="button image_upload_button" id="'.$id.'">Upload Image</col-md->';
+	$uploader .= '<div class="upload_button_div"><span class="button image_upload_button" id="'.$id.'">Upload Image</span>';
 	
 	if(!empty($upload)) {$hide = '';} else { $hide = 'hide';}
 	
-	$uploader .= '<col-md- class="button image_reset_button '. $hide.'" id="reset_'. $id .'" title="' . $id . '">Remove</col-md->';
+	$uploader .= '<span class="button image_reset_button '. $hide.'" id="reset_'. $id .'" title="' . $id . '">Remove</span>';
 	$uploader .='</div>' . "\n";
     $uploader .= '<div class="clear"></div>' . "\n";
 	if(!empty($upload)){

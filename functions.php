@@ -162,34 +162,6 @@ function dubstrap_widgets_init() {
 		'before_title' => '<h4 class="widget-title">',
 		'after_title' => '</h4>',
 	));
-
-/*	register_sidebar( array(
-		'name' => 'About Page Left',
-		'id' => 'about-page-left',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => "</div>",
-		'before_title' => '<h4 class="widget-title">',
-		'after_title' => '</h4>',
-	));
-	
-	register_sidebar( array(
-		'name' => 'About Page Center',
-		'id' => 'about-page-center',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => "</div>",
-		'before_title' => '<h4 class="widget-title">',
-		'after_title' => '</h4>',
-	));
-	
-	register_sidebar( array(
-		'name' => 'About Page Right',
-		'id' => 'about-page-right',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => "</div>",
-		'before_title' => '<h4 class="widget-title">',
-		'after_title' => '</h4>',
-	));
-*/
 	
 	register_sidebar( array(
 		'name' => 'Footer Sidebar Left',

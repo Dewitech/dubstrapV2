@@ -41,6 +41,8 @@ $tt_maptype = array (
 'ROADMAP'
 );
 
+$tt_zoom = range(1,50);
+
 //Achive/Category Layout
 $tt_layout = array (
 'archive-1columns' => '1columns.png',
@@ -104,13 +106,7 @@ $options[] = array("name" => __('Number Of Post to Show','dubstrap'),
 			"std" => "6",
 			"type" => "select",
 			"options" => array("1","2","3","4","5","6","7","8","9","10","11","12"));
-			
-$options[] = array("name" => __('Homepage Style','dubstrap'),
-			"desc" => "Which style would you like for homepage?",
-			"id" => $shortname."_flat",
-			"type" => "radio",
-			"std" => "normal",
-			"options" => array("normal" => "Normal", "flat" => "Flat"));
+
 			
 /* Option Page - General */	
 $options[] = array( "name" => __('Typhography','dubstrap'),
@@ -237,10 +233,7 @@ $options[] = array( "name" => __('Stackexchange','dubstrap'),
 			"std" => "",
 			"type" => "text");
 
-			
-			
-/* Option Page  - Contact */	
-/*
+/* Option Page  - Contact */
 $options[] = array( "name" => __('Contact & Map','dubstrap'),
 			"type" => "heading");
 			
@@ -286,7 +279,7 @@ $options[] = array( "name" => __('Phone','dubstrap'),
 			"desc" => __('phone','dubstrap'),
 			"id" => $shortname."_footphone",
 			"std" => "+62 (0) 1234 56789",
-			"type" => "text");
+			"type" => "text");			
 			
 /* Option Page 	- Archive/Category */
 $options[] = array( "name" => __('Archive Layout','dubstrap'),

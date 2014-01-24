@@ -1,4 +1,4 @@
-dubstrapV2
-==========
+Dubstrap
+========
 
-dubstrap wp framework with Bootstrap3
+Wordpress Bootstrap Framework with Bootstrap 3

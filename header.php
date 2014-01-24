@@ -64,13 +64,8 @@
 				  </button>
 				  <a class="navbar-brand" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
 				</div>
-				<div class="navbar-collapse collapse">
+				<div class="navbar-collapse collapse pull-right">
 					<?php dubstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>
-					<form class="navbar-form navbar-right" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
-						<div class="form-group">
-							<input name="s" id="s" type="text" class="form-control" autocomplete="off" placeholder="<?php _e('Search','dubstrap'); ?>" data-provide="typeahead" data-items="4" data-source='<?php echo $typeahead_data; ?>'>
-						</div>
-					</form>
 				</div><!--/.navbar-collapse -->
 			  </div>
 			</div>

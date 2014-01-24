@@ -24,7 +24,7 @@ get_header();
 	  <div class="row">
 	  <?php query_posts('category_name='. get_option('dt_fcat') .'&posts_per_page='. get_option('dt_fcatnum') .''); ?>
 	  <?php while (have_posts()) : the_post(); ?>
-			<div class="col-md-4">
+			<div class="col-md-4 col-xs-4">
 				<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php echo the_title(); ?></a></h2>
 				<?php the_excerpt(); ?>
 				<p><a class="btn btn-default" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">View details &raquo;</a></p>
@@ -51,7 +51,7 @@ get_header();
 					$alt = get_post_meta($attachment->ID, '_wp_attachment_image_alt', true);
 					$image_title = $attachment->post_title;
 			?>
-				<div class="col-md-4 portfolio-img">
+				<div class="col-md-4 col-xs-6 portfolio-img">
 					<a href="<?php echo $full_url;?>" data-rel="prettyPhoto" rel="prettyPhoto">
 						<img src="<?php echo $full_url; ?>" title="<?php the_title(); ?>" class="img-responsive" alt="<?php the_title(); ?>" />
 					</a>

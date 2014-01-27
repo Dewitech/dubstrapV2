@@ -10,7 +10,7 @@ get_header();
 
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="jumbotron">
-	  <?php query_posts('category_name=' . '&posts_per_page=1'); ?>
+	  <?php query_posts('category_name=' . '&posts_per_page=1' . '&ignore_sticky_posts=1'); ?>
 	  <?php while (have_posts()) : the_post(); ?>
 		<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php echo the_title(); ?></a></h1>
 		<?php the_excerpt(); ?>

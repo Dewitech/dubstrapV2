@@ -37,11 +37,11 @@ get_header();
 	  
 	  <!-- Featured Portfolio Start -->
 	  <div class="row">
-		<?php query_posts('category_name='. get_option('dt_fcat2') .'&posts_per_page='. get_option('dt_fcatnum2') .''); ?>
+		<?php query_posts('category_name='. get_option('dt_fcat2')); ?>
 		
 		  <?php while (have_posts()) : the_post(); ?>
 			<?php
-				$args = array('post_type' => 'attachment', 'post_parent' => $post->ID,  'orderby' => menu_order, 'order' => ASC); 
+				$args = array('post_type' => 'attachment', 'post_parent' => $post->ID,  'orderby' => menu_order, 'order' => ASC, 'posts_per_page' => get_option('dt_fcatnum2')); 
 				$attachments = get_children($args); 							
 
 				foreach ($attachments as $attachment) { 
@@ -53,7 +53,7 @@ get_header();
 			?>
 				<div class="col-md-4 col-sm-6 portfolio-img">
 					<a href="<?php echo $full_url;?>" data-rel="prettyPhoto" rel="prettyPhoto">
-						<img src="<?php echo $full_url; ?>" title="<?php the_title(); ?>" class="img-responsive" alt="<?php the_title(); ?>" />
+						<img src="<?php echo $full_url; ?>" title="<?php the_title(); ?>" id="homethumb" class="img-responsive" alt="<?php the_title(); ?>" />
 					</a>
 				</div>
 			<?php } ?>

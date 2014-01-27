@@ -10,7 +10,7 @@ get_header();
 
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="jumbotron">
-	  <?php query_posts('category_name=' . '&posts_per_page=1' . '&ignore_sticky_posts=1'); ?>
+	  <?php query_posts('category_name='. get_option('dt_herounit') .'&&posts_per_page=1' . '&ignore_sticky_posts=1'); ?>
 	  <?php while (have_posts()) : the_post(); ?>
 		<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php echo the_title(); ?></a></h1>
 		<?php the_excerpt(); ?>
@@ -40,13 +40,17 @@ get_header();
 		<?php query_posts('category_name='. get_option('dt_fcat2') .'&posts_per_page='. get_option('dt_fcatnum2') .''); ?>
 		
 		  <?php while (have_posts()) : the_post(); ?>
-		  <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'thumbnail') ); ?>
-
+		  <?php 
+		  $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'thumbnail') ); 
+		  ?>
 				<div class="col-md-4 col-sm-6">
 					<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php echo the_title(); ?></a></h2>
-					<a href="<?php echo $url;?>" data-rel="prettyPhoto" rel="prettyPhoto">
-						<img src="<?php echo $url ?>" title="	<?php the_title(); ?>" id="homethumb" class="img-responsive" alt="<?php the_title(); ?>" />
-					</a>
+					<?php if ( has_post_thumbnail() ) {
+						echo '<a href="' . $url . '" data-rel="prettyPhoto" rel="prettyPhoto">
+						<img src="' . $url . '" id="homethumb" class="img-responsive" /></a>';
+					}
+					?>
+					
 					<?php the_excerpt(); ?>
 					<p><a class="btn btn-default" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">View details &raquo;</a></p>
 				</div>

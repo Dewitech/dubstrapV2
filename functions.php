@@ -86,10 +86,26 @@ function dubstrap_main_nav() {
     );
 }
 
+/* Nav Menu Walker */
+function dewitech_main_nav() {
+	// display the wp3 menu if available
+    wp_nav_menu( 
+    	array( 
+    		'menu' => '', /* menu name */
+    		'menu_class' => 'nav navbar-nav',
+    		'theme_location' => '', /* where in the theme it's assigned */
+    		'container' => 'false', /* container class */
+    		'fallback_cb' => '', /* menu fallback */
+    		'depth' => '2', /* suppress lower levels for now */
+    		'walker' => new description_walker()
+    	)
+    );
+}
+
 // Menu output mods
 class description_walker extends Walker_Nav_Menu
 {
-      function start_el(&$output, $item, $depth, $args)
+     function start_el(&$output, $item, $depth=0, $args=array(),$current_object_id=0)
       {
 			global $wp_query;
 			$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
@@ -122,7 +138,7 @@ class description_walker extends Walker_Nav_Menu
             $item_output .= $args->link_after;
             // if the item has children add the caret just before closing the anchor tag
             if ( $args->has_children ) {
-            	$item_output .= '<b class="caret"></b></a>';
+            	$item_output .= '</a>';
             }
             else{
             	$item_output .= '</a>';
@@ -132,8 +148,8 @@ class description_walker extends Walker_Nav_Menu
             $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
             }
             
-        function start_lvl(&$output, $depth) {
-            $indent = str_repeat("\t", $depth);
+        function start_lvl(&$output, $depth = 0, $args = Array()) {
+            $indent = str_repeat("\t", !empty($depth) && is_long($depth) ? $depth : 1);
             $output .= "\n$indent<ul class=\"dropdown-menu\">\n";
         }
             

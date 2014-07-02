@@ -75,39 +75,6 @@ require 'googlewebfont.php';
 $options[] = array( "name" => __('General','dubstrap'),
 			"type" => "heading");
 			
-$options[] = array("name" => __('Hero Unit','dubstrap'),
-			"desc" => "Hero Unit Category to Pull",
-			"id" => $shortname."_herounit",
-			"type" => "select",
-			"options" => $dt_slug);
-
-$options[] = array("name" => __('Featured Post','dubstrap'),
-			"desc" => "Category to show on Featured Area",
-			"id" => $shortname."_fcat",
-			"type" => "select",
-			"options" => $dt_slug);
-			
-$options[] = array("name" => __('Number Of Post to Show','dubstrap'),
-			"desc" => "Number of post to show on Featured Area",
-			"id" => $shortname."_fcatnum",
-			"std" => "3",
-			"type" => "select",
-			"options" => array("1","2","3","4","5","6","7","8","9","10","11","12"));
-			
-$options[] = array("name" => __('Featured Area 2','dubstrap'),
-			"desc" => "Category to show on Featured Area 2, only showing Featured Images on the posts",
-			"id" => $shortname."_fcat2",
-			"type" => "select",
-			"options" => $dt_slug);
-			
-$options[] = array("name" => __('Number Of Post to Show','dubstrap'),
-			"desc" => "Number of post to show on Featured Area 2",
-			"id" => $shortname."_fcatnum2",
-			"std" => "6",
-			"type" => "select",
-			"options" => array("1","2","3","4","5","6","7","8","9","10","11","12"));
-
-			
 /* Option Page - General */	
 $options[] = array( "name" => __('Typhography','dubstrap'),
 			"type" => "heading");

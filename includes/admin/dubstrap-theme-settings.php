@@ -53,19 +53,11 @@ $tt_layout = array (
 
 //Theme Color
 $tt_themecol = array (
-'green',
-'blue',
-'orange',
-'red',
-'rose',
-'yellow',
-'light-green',
-'light-blue',
-'light-orange',
-'light-red',
-'light-rose',
-'light-yellow',
-
+'peterriver' => 'peterriver.png',
+'red' => 'red.png',
+'nephritis' => 'nephritis.png',
+'wisteria' => 'wisteria.png',
+'pink' => 'pink.png',
 );
 
 /* Google webfont array list */
@@ -74,6 +66,29 @@ require 'googlewebfont.php';
 /* Option Page - General */	
 $options[] = array( "name" => __('General','dubstrap'),
 			"type" => "heading");
+			
+$options[] = array("name" => __('Site Logo','dubstrap'),
+			"desc" => "upload your site logo",
+			"id" => $shortname."_sitelogo",
+			"type" => "upload");
+
+$options[] = array("name" => __('Favicon','dubstrap'),
+			"desc" => "upload you favicon.ico here",
+			"id" => $shortname."_favicon",
+			"type" => "upload");
+			
+$options[] = array("name" => __('Pageload Option','dubstrap'),
+			"desc" => "check the box if you want to use the pageloader",
+			"id" => $shortname."_pageload",
+			"std" => "true",
+			"type" => "checkbox");
+
+$options[] = array( "name" => __('Theme Color','dubstrap'),
+			"desc" => __('Choose Base color','dubstrap'),
+			"id" => $shortname."_themecol",
+			"std" => "nephritis",
+			"type" => "images",
+			"options" => $tt_themecol );
 			
 /* Option Page - General */	
 $options[] = array( "name" => __('Typhography','dubstrap'),
@@ -117,7 +132,7 @@ $options[] = array("name" => __('Paragraph/Body Fonts','dubstrap'),
 			"type" => "select",
 			"std" => "Lato",
 			"options" => $tt_fonts);
-			
+/*			
 $options[] = array("name" => __('Paragraph/Body Font Size','dubstrap'),
 			"desc" => "Font Size for Paragraph/Body",
 			"id" => $shortname."_pfsize",
@@ -129,7 +144,8 @@ $options[] = array("name" => __('Paragraph/Body Spacing','dubstrap'),
 			"id" => $shortname."_pbspacing",
 			"type" => "text",
 			"std" => "0px");
-		
+*/	
+			
 /* Option Page 	- Social Links */
 $options[] = array( "name" => __('Social Links','dubstrap'),
 			"type" => "heading");
@@ -141,27 +157,39 @@ $options[] = array( "name" => __('Facebook','dubstrap'),
 			"type" => "text");	
 
 $options[] = array( "name" => __('Twitter','dubstrap'),
-			"desc" => __('Twitter Profile','dubstrap'),
+			"desc" => __('Twitter Profile Username','dubstrap'),
 			"id" => $shortname."_twitter",
 			"std" => "ryanhidajat",
 			"type" => "text");	
 			
+$options[] = array( "name" => __('Linkedin','dubstrap'),
+			"desc" => __('Linkedin Full URL Link Profile','dubstrap'),
+			"id" => $shortname."_linkedin",
+			"std" => "http://www.linkedin.com/in/ryanhidajat",
+			"type" => "text");
+			
+$options[] = array( "name" => __('Dribbble','dubstrap'),
+			"desc" => __('Dribbble Full URL Link Profile','dubstrap'),
+			"id" => $shortname."_dribbble",
+			"std" => "http://www.dribbble.com",
+			"type" => "text");	
+			
 $options[] = array( "name" => __('Google+','dubstrap'),
-			"desc" => __('Google+ Profile','dubstrap'),
+			"desc" => __('Google+ Full URL Link Profile','dubstrap'),
 			"id" => $shortname."_gplus",
 			"std" => "https://plus.google.com/106037309636687484460",
+			"type" => "text");
+
+$options[] = array( "name" => __('Pinterest','dubstrap'),
+			"desc" => __('Pinterest Profile','dubstrap'),
+			"id" => $shortname."_pinterest",
+			"std" => "ryanhidajat",
 			"type" => "text");	
 
-$options[] = array( "name" => __('Github','dubstrap'),
-			"desc" => __('Github Profile','dubstrap'),
-			"id" => $shortname."_github",
-			"std" => "ryanhidajat",
-			"type" => "text");		
-			
-$options[] = array( "name" => __('Linkedin','dubstrap'),
-			"desc" => __('Linkedin Profile','dubstrap'),
-			"id" => $shortname."_Linkedin",
-			"std" => "http://www.linkedin.com/in/ryanhidajat",
+$options[] = array( "name" => __('Flickr','dubstrap'),
+			"desc" => __('Flickr Full URL Link Profile','dubstrap'),
+			"id" => $shortname."_flickr",
+			"std" => "http://flickr.com",
 			"type" => "text");	
 
 $options[] = array( "name" => __('Youtube','dubstrap'),
@@ -170,35 +198,36 @@ $options[] = array( "name" => __('Youtube','dubstrap'),
 			"std" => "ryanhidajat",
 			"type" => "text");
 
-$options[] = array( "name" => __('Pinterest','dubstrap'),
-			"desc" => __('Pinterest Profile','dubstrap'),
-			"id" => $shortname."_pinterest",
-			"std" => "",
+$options[] = array( "name" => __('Vimeo','dubstrap'),
+			"desc" => __('Vimeo Full URL Link Profile','dubstrap'),
+			"id" => $shortname."_vimeo",
+			"std" => "http://vimeo.com",
 			"type" => "text");	
 
+$options[] = array( "name" => __('Dropbox','dubstrap'),
+			"desc" => __('Dropbox Full URL Link Profile','dubstrap'),
+			"id" => $shortname."_dropbox",
+			"std" => "http://dropbox.com",
+			"type" => "text");			
+
+$options[] = array( "name" => __('Github','dubstrap'),
+			"desc" => __('Github Profile Username','dubstrap'),
+			"id" => $shortname."_github",
+			"std" => "ryanhidajat",
+			"type" => "text");		
+
 $options[] = array( "name" => __('Tumblr','dubstrap'),
-			"desc" => __('Tumblr Profile','dubstrap'),
+			"desc" => __('Tumblr Full URL Link Profile','dubstrap'),
 			"id" => $shortname."_tumblr",
-			"std" => "",
+			"std" => "http://tumblr.com",
 			"type" => "text");	
 
 $options[] = array( "name" => __('Instagram','dubstrap'),
-			"desc" => __('Instagram Profile','dubstrap'),
+			"desc" => __('Instagram Full URL Link Profile','dubstrap'),
 			"id" => $shortname."_instagram",
-			"std" => "",
-			"type" => "text");		
-
-$options[] = array( "name" => __('Foursquare','dubstrap'),
-			"desc" => __('Foursquare Profile','dubstrap'),
-			"id" => $shortname."_foursquare",
-			"std" => "",
+			"std" => "http://instagram.com",
 			"type" => "text");			
-
-$options[] = array( "name" => __('Stackexchange','dubstrap'),
-			"desc" => __('stackexchange Profile','dubstrap'),
-			"id" => $shortname."_stackexchange",
-			"std" => "",
-			"type" => "text");
+		
 
 /* Option Page  - Contact */
 $options[] = array( "name" => __('Contact & Map','dubstrap'),
@@ -228,6 +257,12 @@ $options[] = array( "name" => __('Map Style','dubstrap'),
 			"std" => "TERRAIN",		
 			"type" => "select",
 			"options" => $tt_maptype);
+			
+$options[] = array( "name" => __('Scrollable','dubstrap'),
+			"desc" => __('check the box to enable to scrolling on the map.','dubstrap'),
+			"id" => $shortname."_mapscroll",
+			"std" => "false",		
+			"type" => "checkbox");
 			
 $options[] = array( "name" => __('Map Zoom Level','dubstrap'),
 			"desc" => __('inpute numbers from 1-50','dubstrap'),
@@ -284,7 +319,7 @@ $options[] = array( "name" => __('Adress','dubstrap'),
 $options[] = array( "name" => __('Footer Copyright Text','dubstrap'),
 			"desc" => __('text on footer copyright','dubstrap'),
 			"id" => $shortname."_footcopy",
-			"std" => "Developed by <a href='http://twitter.com/ryanhidajat'>Ryan Hidajat</a> and <a href='http://dewitech.com'>Dewitech</a> Team",
+			"std" => "Developed by <a href='http://twitter.com/ryanhidajat'>Ryan Hidajat</a> and <a href='http://dubstrap.com'>dubstrap</a> Team",
 			"type" => "textarea");
 
 

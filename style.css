@@ -15,6 +15,13 @@ article {margin-top:60px}
 .portfolio-img {margin-bottom:20px}
 .footer-bottom {margin-top:20px;}
 
+.wp-caption {}
+.wp-caption-text {}
+.sticky {}
+.gallery-caption {}
+.bypostauthor {}
+
+
 /* Archive Style */
 .item-cat {margin-bottom:20px; height:300px; overflow:hidden;}
 .item-cat2 {margin-bottom:20px; height:300px; overflow:hidden;}
@@ -62,4 +69,23 @@ ul.contact-widget {list-style-type:none; margin:0;}
 #map {
 width: 100%;
 height: 400px;
+}
+
+/* Alignment */
+.alignleft {
+	float:left;
+	margin:5px;
+}
+.alignright {
+	float:right;
+	margin:5px;
+}
+.aligncenter {
+	text-align:center;
+}
+.alignnone {
+	max-width:100%;
+}
+img {
+	max-width:100%;
 }

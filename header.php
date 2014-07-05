@@ -65,7 +65,7 @@
 				  <a class="navbar-brand" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
 				</div>
 				<div class="navbar-collapse collapse pull-right">
-					<?php dubstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>
+					<?php dubstrap_main_nav( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); // Adjust using Menus in Wordpress Admin ?>
 				</div><!--/.navbar-collapse -->
 			  </div>
 			</div>

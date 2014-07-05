@@ -43,14 +43,6 @@ $tt_maptype = array (
 
 $tt_zoom = range(1,50);
 
-//Achive/Category Layout
-$tt_layout = array (
-'archive-1columns' => '1columns.png',
-'archive-2columns' => '2columns.png',
-'archive-3columns' => '3columns.png'
-);
-
-
 //Theme Color
 $tt_themecol = array (
 'peterriver' => 'peterriver.png',
@@ -282,19 +274,7 @@ $options[] = array( "name" => __('Phone','dubstrap'),
 			"id" => $shortname."_footphone",
 			"std" => "+62 (0) 1234 56789",
 			"type" => "text");			
-			
-/* Option Page 	- Archive/Category */
-$options[] = array( "name" => __('Archive Layout','dubstrap'),
-			"type" => "heading");
 
-$options[] = array( "name" => __('Archive Layout','dubstrap'),
-			"desc" => __('choose Layout for Archive/Category pages','dubstrap'),
-			"id" => $shortname."_layout",
-			"std" => "3columns",
-			"type" => "images",
-			"options" => $tt_layout );
-
-			
 /* Option Page 	- Google Analytics */
 $options[] = array( "name" => __('Google Analytics','dubstrap'),
 			"type" => "heading");
